@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-Dashboard</title>
+</head>
+<body>
+    <div class="main">
+        <h2>User Dashboard</h2>
+        <img src="{{user_info.profile_image.url}}"  width="150" height="150">
+        <p>Name: {{user_info.student_name}}</p>
+        <p>Father: {{user_info.father_name}}
+        <p>Mother: {{user_info.mother_name}}
+        <p>School: {{user_info.school_name}}
+        <p>Class: {{user_info.standard}}
+        <p>Date of Birth: {{user_info.dob}}</p>
+        <p>Gender: {{user_info.gender}}</p>
+        <p>Address: {{user_info.address}}</p>
+        <p>State: {{user_info.state}}</p>
+        <p>Pin Code: {{user_info.pin}}</p>
+        <p>Mobile No: {{user_info.mobile}}</p>
+        <p>Email ID: {{user_info.email}}</p>
+    </div>
+</body>
+</html>

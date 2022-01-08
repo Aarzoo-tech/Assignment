@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="{% static '/CSS/signup.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Sign Up</div>
+        <form action="http://localhost:8000/sign-up" method="POST">
+        {% csrf_token %}
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">First Name</span>
+                    <input type="text" name="firstname" placeholder="First Name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Last Name</span>
+                    <input type="text" name="lastname" placeholder="Last Name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">User Name</span>
+                    <input type="text" name="username" placeholder="User Name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Date Of Birth</span>
+                    <input type="Date" name="dob" placeholder="Date Of Birth" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Profile Photo</span>
+                    <input type="file" name="profile" placeholder="Profile Photo" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Security Question</span>
+                    <select name="security_question">
+                        <option value="question">Select Security Question</option>
+                        <option vlaue="question1">What city were you born in?</option>
+                        <option vlaue="question2">What is the name of your first school?</option>
+                        <option value="question3">What was your favorite food as a child?</option>
+                        <option value="question4">What's your favorite movie?</option>
+                        <option value="question5">What is favorite color?</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <span class="details">Answer Your Question</span>
+                    <input type="text" name="answer" placeholder="Answer" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Address</span>
+                    <textarea name="address" placeholder="Please write your address" id="" cols="90" rows="3" required></textarea>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Sign Up">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
